@@ -11,7 +11,7 @@ const NavBar = () => (
           <MenuIcon />
         </IconButton>
         <Typography varient="title" color="inherit">
-          React & Material - UI Sample Application
+          Let's Get This Job (Bread)
         </Typography>
       </Toolbar>
     </AppBar>

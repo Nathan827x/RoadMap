@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     maxWidth: '50%',
     margin: 'auto',
-  }
+  },
 }));
 
 function LandingPage() {
-
   function testMethod(strInput) {
-    alert('You clicked on: ' + strInput);
+    // TODO: Routing on button click. User Router or something
+    const temp = `You clicked on: ${strInput}`;
+    console.debug(temp);
   }
 
   const classes = useStyles();
@@ -55,7 +56,29 @@ function LandingPage() {
           </Paper>
         </Grid>
       </Grid>
-    </div >
+
+      <Grid container spacing={3}>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}>
+            <p>Maybe an logo or something about the app</p>
+            <p>Maybe Key words? Learn, Apply, Jobs</p>
+          </Paper>
+        </Grid>
+        <Grid item xs={8}>
+          <Paper className={classes.paper}>
+            {/* TODO: Come up with an actual description */}
+            <p>
+              UPDATE!!!!!!!!
+              Description of what the app really is. It&#39;s a place with more
+              orginzed solution for job hunters (Specifically the tech world).
+              A collection of great learning sources, job application tracking,
+              and something else?
+            </p>
+          </Paper>
+        </Grid>
+      </Grid>
+
+    </div>
   );
 }
 

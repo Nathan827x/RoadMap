@@ -11,6 +11,13 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
     maxWidth: '50%',
     margin: 'auto',
+    marginBottom: '5%',
+  },
+  aboutApp: {
+    padding: theme.spacing(2),
+    textAlign: 'left',
+    margin: 'auto',
+    marginRight: '1em',
   },
 }));
 
@@ -59,22 +66,21 @@ function LandingPage() {
 
       <Grid container spacing={3}>
         <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <p>Maybe an logo or something about the app</p>
-            <p>Maybe Key words? Learn, Apply, Jobs</p>
-          </Paper>
+          <h3>Why This Site?</h3>
+          <p>Better organization</p>
+          <p>Find resources faster</p>
+          <p>Track job applications</p>
         </Grid>
-        <Grid item xs={8}>
-          <Paper className={classes.paper}>
-            {/* TODO: Come up with an actual description */}
-            <p>
-              UPDATE!!!!!!!!
-              Description of what the app really is. It&#39;s a place with more
-              orginzed solution for job hunters (Specifically the tech world).
-              A collection of great learning sources, job application tracking,
-              and something else?
-            </p>
-          </Paper>
+        <Grid item md className={classes.aboutApp}>
+          <h3>Welcome to RoadMap!</h3>
+          <p>
+            A more organized place to find resources for learning
+            tech concepts, practice resources, and job application tracking. While
+            previously applying to jobs, there were a lot of different recommendation
+            of sources. It got confusing and I didn’t know where to start. I created
+            RoadMap to keep everything organized and wanted to help others benefit
+            from this too!
+          </p>
         </Grid>
       </Grid>
 

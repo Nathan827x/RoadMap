@@ -11,7 +11,7 @@ const NavBar = () => (
           <MenuIcon />
         </IconButton>
         <Typography varient="title" color="inherit">
-          Let's Get This Job (Bread)
+          Let&#39;s Get This Job (Bread)
         </Typography>
       </Toolbar>
     </AppBar>

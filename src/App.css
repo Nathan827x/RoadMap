@@ -1,31 +1,13 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +17,15 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+footer {
+  /* TODO: Something is still wrong with this footer.
+  It won't stay at the bottom of the screen when in mobile.
+  This really needs to fixed */
+  position: absolute;
+  /* flex-shrink: 0; */
+
+  /* margin-top: auto; */
+  /* bottom:0; */
 }

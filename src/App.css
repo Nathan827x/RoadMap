@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* display: flex;
+  flex-direction: column; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -18,9 +20,12 @@
 }
 
 footer {
-  position:absolute;
+  /* TODO: Something is still wrong with this footer.
+  It won't stay at the bottom of the screen when in mobile.
+  This really needs to fixed */
+  position: absolute;
   /* flex-shrink: 0; */
-  left:0;
-  bottom:0;
-  right:0;
+
+  /* margin-top: auto; */
+  /* bottom:0; */
 }

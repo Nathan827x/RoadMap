@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper } from '@material-ui/core';
 import './landing-page.css';
@@ -22,10 +23,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function LandingPage() {
+
+
+
   function testMethod(strInput) {
     // TODO: Routing on button click. User Router or something
     const temp = `You clicked on: ${strInput}`;
+
+    const state = { redirect: '/dashboard' };
     console.debug(temp);
+
+    return <Redirect to={state.redirect} />;
+    // return <Redirect to="/dashboard" />;
   }
 
   const classes = useStyles();
@@ -34,14 +43,17 @@ function LandingPage() {
     <div className="homePage">
       <Grid container spacing={3}>
         <Grid item xs>
-          <Paper
-            elevation={3}
-            className={classes.paper}
-            onClick={() => { testMethod('learning'); }}
-          >
-            <LocalLibrary />
-            <p>Learning Resources</p>
-          </Paper>
+          <Link to="/learning-resources">
+            <Paper
+              elevation={3}
+              className={classes.paper}
+              onClick={() => { testMethod('learning-resources'); }}
+            >
+              <LocalLibrary />
+              <p>Learning Resources</p>
+            </Paper>
+          </Link>
+          <Link to="/learning-resources">LINK</Link>
         </Grid>
         <Grid item xs>
           <Paper

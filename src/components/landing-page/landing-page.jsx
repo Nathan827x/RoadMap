@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Paper } from '@material-ui/core';
 import './landing-page.css';
@@ -22,44 +22,27 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function LandingPage() {
-
-
-
-  function testMethod(strInput) {
-    // TODO: Routing on button click. User Router or something
-    const temp = `You clicked on: ${strInput}`;
-
-    const state = { redirect: '/dashboard' };
-    console.debug(temp);
-
-    return <Redirect to={state.redirect} />;
-    // return <Redirect to="/dashboard" />;
-  }
-
+export default function LandingPage() {
   const classes = useStyles();
 
   return (
     <div className="homePage">
       <Grid container spacing={3}>
         <Grid item xs>
-          <Link to="/learning-resources">
+          <Link to="/learning-resources" className="redirect">
             <Paper
               elevation={3}
               className={classes.paper}
-              onClick={() => { testMethod('learning-resources'); }}
             >
               <LocalLibrary />
               <p>Learning Resources</p>
             </Paper>
           </Link>
-          <Link to="/learning-resources">LINK</Link>
         </Grid>
         <Grid item xs>
           <Paper
             elevation={3}
             className={classes.paper}
-            onClick={() => { testMethod('Other'); }}
           >
             <p>Something else?</p>
           </Paper>
@@ -68,7 +51,6 @@ function LandingPage() {
           <Paper
             elevation={3}
             className={classes.paper}
-            onClick={() => { testMethod('Job Board'); }}
           >
             <Work />
             <p>Job Board</p>
@@ -95,9 +77,6 @@ function LandingPage() {
           </p>
         </Grid>
       </Grid>
-
     </div>
   );
 }
-
-export default LandingPage;

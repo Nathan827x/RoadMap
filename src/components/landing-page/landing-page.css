@@ -3,3 +3,7 @@ div .homePage {
     padding-right: 1%;
     padding-top: 5%;
 }
+
+.redirect {
+    text-decoration: none;
+}
